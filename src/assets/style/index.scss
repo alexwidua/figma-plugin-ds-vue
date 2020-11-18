@@ -1,0 +1,16 @@
+@import 'typography';
+@import 'color';
+@import 'icon';
+@import 'util';
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Inter', sans-serif;
+}

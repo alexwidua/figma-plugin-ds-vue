@@ -1,0 +1,45 @@
+.icon {
+  //icons
+  &--hidden {
+    background-image: url('../icons/hidden.svg');
+  }
+  &--visible {
+    background-image: url('../icons/visible.svg');
+  }
+
+  // Custom
+
+  &--ease-in-out {
+    background-image: url('../icons/custom/ease-in-out.svg');
+  }
+  &--ease-in {
+    background-image: url('../icons/custom/ease-in.svg');
+  }
+  &--ease-out {
+    background-image: url('../icons/custom/ease-out.svg');
+  }
+  &--ease {
+    background-image: url('../icons/custom/ease.svg');
+  }
+  &--custom-ease {
+    background-image: url('../icons/custom/custom-ease.svg');
+  }
+  &--steps {
+    background-image: url('../icons/custom/steps.svg');
+  }
+  &--steps-skip-start {
+    background-image: url('../icons/custom/steps-skip-start.svg');
+  }
+  &--steps-skip-end {
+    background-image: url('../icons/custom/steps-skip-end.svg');
+  }
+  &--steps-skip-both {
+    background-image: url('../icons/custom/steps-skip-both.svg');
+  }
+  &--hint--white {
+    background-image: url('../icons/custom/hint--white.svg');
+  }
+  &--hint--black {
+    background-image: url('../icons/custom/hint--black.svg');
+  }
+}
