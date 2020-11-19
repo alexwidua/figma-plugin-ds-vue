@@ -9,9 +9,9 @@
 			<span
 				class="select__button__label"
 				:class="{ 'label--placeholder': !this.selectedKey }"
-				>{{ buttonLabel }}</span
-			>
-			<span class="chevron"></span>
+				v-html="buttonLabel"
+			/>
+			<span class="chevron" />
 		</button>
 		<ul class="select__input" :class="{ active: isOpen }">
 			<template v-for="(item, itemIndex) in items">

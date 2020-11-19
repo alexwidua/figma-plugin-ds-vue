@@ -6,9 +6,8 @@
 			section: section
 		}"
 	>
-		<div class="disclosure__title" @click="toggle">
-			{{ title }}
-		</div>
+		<div class="disclosure__title" @click="toggle" v-html="title" />
+
 		<div class="disclosure__content">
 			<slot>Content</slot>
 		</div>

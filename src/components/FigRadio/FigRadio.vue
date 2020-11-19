@@ -10,9 +10,11 @@
 				:disabled="disabled"
 				@input="onInput(option.value)"
 			/>
-			<label class="radio__label" :for="uniqueId + i">
-				{{ option.label }}
-			</label>
+			<label
+				class="radio__label"
+				:for="uniqueId + i"
+				v-html="option.label"
+			/>
 		</form>
 	</div>
 </template>
@@ -120,7 +122,7 @@ export default {
 			display: block;
 			width: 10px;
 			height: 10px;
-			margin: 2px 10px 0 -8px;
+			margin: 0px 12px 0 -8px;
 			border: 1px solid var(--black8);
 			border-radius: var(--border-radius-small);
 			border-radius: 50%;
