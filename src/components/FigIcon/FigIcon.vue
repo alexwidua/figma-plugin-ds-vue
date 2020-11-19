@@ -1,15 +1,18 @@
 <template>
-	<div
+	<span
+		v-if="!textIcon"
 		class="icon"
 		:class="{
 			['icon--' + icon]: icon,
-			'icon--text': iconText,
-			'icon--selected': selected,
 			spinning
 		}"
-	>
-		{{ iconText }}
-	</div>
+	/>
+	<span
+		v-else
+		class="icon icon--text"
+		:class="{ spinning }"
+		v-html="textIcon"
+	/>
 </template>
 
 <script>
@@ -20,8 +23,8 @@ export default {
 	 * Default Figma icons are located in ./assets/icons
 	 */
 	props: {
-		icon: String,
-		iconText: String,
+		icon: { type: String, default: 'smiley' },
+		textIcon: String,
 		selected: Boolean,
 		spinning: Boolean
 	}
@@ -46,23 +49,6 @@ export default {
 		justify-content: center;
 		font-size: var(--font-size-xsmall);
 		font-family: var(--font-stack);
-	}
-
-	&--selected {
-		color: var(--white);
-		background-color: var(--blue);
-		background-position: -1px -97px;
-		border: 1px solid transparent;
-
-		&:hover {
-			color: var(--white);
-			background-color: var(--blue);
-		}
-
-		&:active {
-			color: var(--white);
-			background-color: var(--blue);
-		}
 	}
 }
 

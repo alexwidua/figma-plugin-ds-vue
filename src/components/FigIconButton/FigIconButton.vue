@@ -1,18 +1,24 @@
 <template>
 	<div
+		v-if="!textIcon"
 		class="icon-button"
 		:class="{
 			['icon--' + icon]: icon,
-			'icon-button--text': iconText,
 			'icon-button--selected': selected,
 			spinning,
 			disabled
 		}"
 		@click="onClick"
 		tabIndex="0"
-	>
-		{{ iconText }}
-	</div>
+	/>
+	<div
+		v-else
+		class="icon-button"
+		:class="{ 'icon-button--selected': selected, spinning, disabled }"
+		@click="onClick"
+		tabIndex="0"
+		v-html="textIcon"
+	/>
 </template>
 
 <script>
@@ -23,11 +29,11 @@ export default {
 	 * Default Figma icons are located in ./assets/icons
 	 */
 	props: {
-		icon: String,
-		iconText: String,
+		icon: { type: String, default: 'smiley' },
+		textIcon: String,
 		selected: Boolean,
-		spinning: Boolean,
-		disabled: Boolean
+		disabled: Boolean,
+		spinning: Boolean
 	},
 	methods: {
 		onClick(e) {
