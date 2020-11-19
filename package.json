@@ -1,6 +1,6 @@
 {
 	"name": "figma-plugin-ds-vue",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Vue component library that matches the Figma Design System for building Figma plugins.",
 	"private": false,
 	"main": "./dist/figma-plugin-ds-vue.umd.js",
@@ -9,6 +9,7 @@
 		"serve": "vue-cli-service serve src/serve.js --mode development",
 		"build-lib": "vue-cli-service build --target lib --name figma-plugin-ds-vue src/build.js"
 	},
+	"dependencies": {},
 	"devDependencies": {
 		"@vue/cli-plugin-babel": "~4.5.0",
 		"@vue/cli-plugin-eslint": "~4.5.0",
