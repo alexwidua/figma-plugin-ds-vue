@@ -4,10 +4,10 @@
 			class="toggle__knob"
 			type="checkbox"
 			:id="uniqueId"
-			:checked="checked"
+			:checked="checked !== undefined ? checked : value"
 			:value="value"
 			:disabled="disabled"
-			@change="(evt) => $emit('input', evt.target.checked)"
+			@change="onChange"
 		/>
 		<label class="toggle__label" :for="uniqueId">
 			<slot>Item</slot>
@@ -19,17 +19,22 @@
 import uniqueId from '@/mixins/uniqueId'
 
 export default {
-	name: 'FigToggle',
+	name: 'FigSwitch',
 	/**
 	 * Switch component to toggle between two states
 	 */
 	props: {
-		checked: Boolean,
 		value: Boolean,
+		checked: { type: Boolean, default: undefined },
 		disabled: Boolean
 	},
 	// Use unique ID so clicking the label also toggles the switch
-	mixins: [uniqueId]
+	mixins: [uniqueId],
+	methods: {
+		onChange(e) {
+			this.$emit('input', e.target.checked)
+		}
+	}
 }
 </script>
 

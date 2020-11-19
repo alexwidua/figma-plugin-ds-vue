@@ -1,6 +1,10 @@
 <template>
 	<div class="select">
-		<button class="select__button" @click="openSelect()">
+		<button
+			class="select__button"
+			@click="openSelect()"
+			:disabled="disabled"
+		>
 			<span
 				v-if="buttonIcon"
 				class="icon select__icon"
@@ -8,7 +12,9 @@
 			/>
 			<span
 				class="select__button__label"
-				:class="{ 'label--placeholder': !this.selectedKey }"
+				:class="{
+					'select__button__label--placeholder': !this.selectedKey
+				}"
 				v-html="buttonLabel"
 			/>
 			<span class="chevron" />
@@ -55,24 +61,25 @@ export default {
 			default() {
 				return [
 					{
-						key: 'item-1',
+						icon: 'heart',
 						label: 'Item 1',
-						icon: 'visible'
+						key: 'item-1'
 					},
 					{
 						divider: true
 					},
 					{
-						key: 'item-2',
+						icon: 'heart-fill',
 						label: 'Item 2',
-						icon: 'hidden'
+						key: 'item-2'
 					}
 				]
 			}
 		},
-		placeholder: { type: String, default: 'Placeholder' },
 		value: { type: String, default: undefined },
-		open: { type: Boolean, default: undefined }
+		placeholder: { type: String, default: 'Placeholder' },
+		open: { type: Boolean, default: undefined },
+		disabled: Boolean
 	},
 
 	computed: {
@@ -142,42 +149,54 @@ export default {
 		border: 1px solid transparent;
 		border-radius: var(--border-radius-small);
 
+		& * {
+			pointer-events: none;
+		}
+
 		&:hover {
 			border-color: var(--black1);
+
+			& .select__button__label--placeholder {
+				color: var(--black8);
+			}
 		}
+
 		&:focus {
 			border: 1px solid var(--blue);
 			outline: 1px solid var(--blue);
 			outline-offset: -2px;
-		}
-		&:disabled:hover {
-			justify-content: flex-start;
-			border-color: transparent;
-		}
-		* {
-			pointer-events: none;
+
+			& .select__button__label--placeholder {
+				color: var(--black8);
+			}
 		}
 
-		&:hover .label--placeholder {
-			color: var(--black8);
+		&:disabled {
+			&:hover {
+				justify-content: flex-start;
+				border-color: transparent;
+
+				& .chevron {
+					margin-left: -12px;
+					opacity: 0.3;
+				}
+			}
+
+			& .select__icon {
+				opacity: 0.1;
+			}
+			& .select__button__label {
+				color: var(--black3);
+			}
+			&:hover .select__button__label--placeholder {
+				color: var(--black3);
+			}
 		}
-		&:focus .label--placeholder {
-			color: var(--black8);
-		}
-		&:disabled:hover .label--placeholder {
-			color: var(--black3);
-		}
+
 		&:hover .chevron,
 		&:focus .chevron {
 			margin-left: auto;
 			opacity: 1;
-		}
-		&:disabled:hover .chevron {
-			margin-left: -12px;
-			opacity: 0.3;
-		}
-		&:disabled .label {
-			color: var(--black3);
 		}
 
 		&__label {
@@ -220,7 +239,7 @@ export default {
 		&::-webkit-scrollbar {
 			width: 12px;
 			background-color: transparent;
-			background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=);
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=');
 			background-repeat: repeat;
 			background-size: 100% auto;
 		}

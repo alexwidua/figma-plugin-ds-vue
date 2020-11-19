@@ -29,7 +29,7 @@ export default {
 	 * Default Figma icons are located in ./assets/icons
 	 */
 	props: {
-		icon: { type: String, default: 'smiley' },
+		icon: { type: String, default: 'heart' },
 		textIcon: String,
 		selected: Boolean,
 		disabled: Boolean,

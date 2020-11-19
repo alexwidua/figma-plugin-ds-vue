@@ -1,15 +1,21 @@
 <template>
 	<div>
-		<label v-if="label" class="label" :for="uniqueId">
-			{{ label }}
-		</label>
-		<div class="input" v-if="icon || iconText">
+		<label v-if="label" class="label" :for="uniqueId" v-html="label" />
+		<div class="input" v-if="icon || textIcon">
 			<div
-				v-if="icon"
+				v-if="!textIcon"
 				class="icon input__icon"
-				:class="`icon--${icon}`"
+				:class="{
+					['icon--' + icon]: icon,
+					spinning
+				}"
 			/>
-			<div v-if="iconText" class="input__icon--text">{{ iconText }}</div>
+			<div
+				v-else
+				class="input__icon--text"
+				:class="{ spinning }"
+				v-html="textIcon"
+			/>
 			<input
 				type="input"
 				class="input__field indent"
@@ -45,12 +51,13 @@ export default {
 	 */
 	props: {
 		icon: { type: String, default: undefined },
-		iconText: { type: String, default: undefined },
+		textIcon: { type: String, default: undefined },
 		value: { type: String, default: undefined },
 		label: { type: String, default: undefined },
-		placeholder: String,
+		placeholder: { type: String, default: undefined },
 		disabled: Boolean,
-		border: Boolean
+		border: Boolean,
+		spinning: Boolean
 	},
 	// Use unique ID so clicking the label also focusses the input
 	mixins: [uniqueId],
@@ -135,7 +142,7 @@ export default {
 
 	&__icon {
 		position: absolute;
-		top: -1px;
+		top: 0;
 		left: 0;
 		z-index: 1;
 		width: var(--size-medium);
@@ -145,13 +152,13 @@ export default {
 
 		&--text {
 			position: absolute;
-			top: 50%;
+			top: calc(36px / 4);
 			left: 12px;
 			z-index: 1;
-			color: var(--black1);
+			color: var(--black3);
+			font-weight: var(--font-weight-bold);
 			font-size: var(--font-size-xsmall);
-			transform: translateY(-50%);
-			opacity: 0.3;
+			opacity: 1;
 			pointer-events: none;
 		}
 	}
@@ -180,5 +187,17 @@ export default {
 
 .indent {
 	padding-left: 32px;
+}
+
+.spinning {
+	animation: rotating 1s linear infinite;
+}
+@keyframes rotating {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 </style>

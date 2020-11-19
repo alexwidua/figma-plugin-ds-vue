@@ -6,7 +6,7 @@
 			section: section
 		}"
 	>
-		<div class="disclosure__title" @click="toggle" v-html="title" />
+		<span class="disclosure__title" @click="toggle" v-html="title" />
 
 		<div class="disclosure__content">
 			<slot>Content</slot>
@@ -66,7 +66,7 @@ export default {
 			border-bottom: 1px solid transparent;
 		}
 
-		&.section {
+		&.section .disclosure__title {
 			font-weight: var(--font-weight-bold);
 		}
 

@@ -1,19 +1,19 @@
 <template>
 	<div class="radio">
-		<form class="radio__wrapper" v-for="(option, i) in options" :key="i">
+		<form class="radio__wrapper" v-for="(item, i) in items" :key="i">
 			<input
 				class="radio__field"
 				type="radio"
-				:checked="option.value == selectedKey"
+				:checked="item.value == selectedKey"
 				:id="uniqueId + i"
-				:value="option.value"
+				:value="item.value"
 				:disabled="disabled"
-				@input="onInput(option.value)"
+				@change="onChange(item.value)"
 			/>
 			<label
 				class="radio__label"
 				:for="uniqueId + i"
-				v-html="option.label"
+				v-html="item.label"
 			/>
 		</form>
 	</div>
@@ -29,16 +29,16 @@ export default {
 	 */
 	props: {
 		checked: Number,
-		options: {
+		items: {
 			type: Array,
 			default() {
 				return [
-					{ value: '1', label: 'Item 1' },
-					{ value: '2', label: 'Item 2' }
+					{ label: 'Item 1', value: '1' },
+					{ label: 'Item 2', value: '2' }
 				]
 			}
 		},
-		value: { type: Number, default: undefined },
+		value: { type: String | Number, default: undefined },
 		disabled: Boolean
 	},
 	data() {
@@ -49,7 +49,7 @@ export default {
 	// Use unique ID so clicking the label also (un)checks the box
 	mixins: [uniqueId],
 	methods: {
-		onInput(selection) {
+		onChange(selection) {
 			this.selectedKeyState = selection
 			this.$emit('input', selection)
 		}

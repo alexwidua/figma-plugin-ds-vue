@@ -4,7 +4,7 @@
 			class="checkbox__input"
 			type="checkbox"
 			:id="uniqueId"
-			:checked="checked"
+			:checked="checked !== undefined ? checked : value"
 			:value="value"
 			:disabled="disabled"
 			@change="onChange"
@@ -24,8 +24,8 @@ export default {
 	 * Checkbox input component
 	 */
 	props: {
-		checked: Boolean,
 		value: Boolean,
+		checked: { type: Boolean, default: undefined },
 		disabled: Boolean
 	},
 	// Use unique ID so clicking the label also (un)checks the box
