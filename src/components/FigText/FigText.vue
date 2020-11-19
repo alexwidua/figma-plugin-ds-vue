@@ -47,7 +47,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .type {
 	font-weight: var(--font-weight-normal);
 	font-size: var(--font-size-xsmall);

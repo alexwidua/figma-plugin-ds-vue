@@ -1,8 +1,6 @@
 <template>
 	<div class="textarea__wrapper">
-		<label v-if="label" class="label" :for="uniqueId">
-			{{ label }}
-		</label>
+		<label v-if="label" class="label" :for="uniqueId" v-html="label" />
 		<textarea
 			class="textarea__field"
 			:id="uniqueId"
@@ -37,7 +35,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .textarea {
 	&__wrapper {
 		position: relative;
