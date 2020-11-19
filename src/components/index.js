@@ -1,4 +1,5 @@
 /* Default Export components to use in Test.vue component */
+/* This is not part of the build */
 
 import FigButton from './FigButton'
 import FigCheckbox from './FigCheckbox'

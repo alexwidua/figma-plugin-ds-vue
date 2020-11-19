@@ -6,8 +6,8 @@
 			<FigDisclosureItem />
 		</FigDisclosure>
 		<FigDivider />
-		<FigIcon icon="check" />
-		<FigIconButton icon="check" />
+		<FigIcon />
+		<FigIconButton />
 		<FigInput />
 		<FigLabel />
 		<FigRadio />
