@@ -77,7 +77,7 @@ export default {
 			}
 		},
 		value: { type: String, default: undefined },
-		placeholder: { type: String, default: 'Placeholder' },
+		placeholder: { type: String, default: undefined },
 		open: { type: Boolean, default: undefined },
 		disabled: Boolean
 	},
@@ -305,12 +305,12 @@ export default {
 			}
 		}
 	}
-	// Render the Icon component styles but override some additional styles
+	// Render the .icon class styles (_icon.scss) but override some additional styles
 	&__icon {
 		width: var(--size-medium);
 		height: var(--size-medium);
 		margin-top: -1px;
-		margin-right: 0;
+		margin-right: 2px;
 		margin-left: -8px;
 		font-size: var(--font-size-xsmall);
 		font-family: var(--font-stack);

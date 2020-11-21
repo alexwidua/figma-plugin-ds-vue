@@ -1,6 +1,6 @@
 <template>
 	<span
-		v-if="!textIcon"
+		v-if="!iconText"
 		class="icon"
 		:class="{
 			['icon--' + icon]: icon,
@@ -11,7 +11,7 @@
 		v-else
 		class="icon icon--text"
 		:class="{ spinning }"
-		v-html="textIcon"
+		v-html="iconText"
 	/>
 </template>
 
@@ -24,42 +24,15 @@ export default {
 	 */
 	props: {
 		icon: { type: String, default: 'heart' },
-		textIcon: String,
+		iconText: String,
 		spinning: Boolean
 	}
 }
 </script>
 
 <style lang="scss">
-.icon {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: var(--size-medium);
-	height: var(--size-medium);
-	font-size: var(--font-size-xsmall);
-	font-family: var(--font-stack);
-	cursor: default;
-	user-select: none;
-
-	&--text {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: var(--font-size-xsmall);
-		font-family: var(--font-stack);
-	}
-}
-
-.spinning {
-	animation: rotating 1s linear infinite;
-}
-@keyframes rotating {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
+//
+// Since the icon class is also used by other components, styles are
+// moved to -> _icon.scss
+//
 </style>

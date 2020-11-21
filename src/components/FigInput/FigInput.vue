@@ -1,9 +1,9 @@
 <template>
 	<div>
 		<label v-if="label" class="label" :for="uniqueId" v-html="label" />
-		<div class="input" v-if="icon || textIcon">
+		<div class="input" v-if="icon || iconText">
 			<div
-				v-if="!textIcon"
+				v-if="!iconText"
 				class="icon input__icon"
 				:class="{
 					['icon--' + icon]: icon,
@@ -14,7 +14,7 @@
 				v-else
 				class="input__icon--text"
 				:class="{ spinning }"
-				v-html="textIcon"
+				v-html="iconText"
 			/>
 			<input
 				type="input"
@@ -23,7 +23,7 @@
 				:value="value"
 				:disabled="disabled"
 				:placeholder="placeholder"
-				@change="onChange"
+				@input="onInput"
 				:id="uniqueId"
 			/>
 		</div>
@@ -35,14 +35,14 @@
 			:value="value"
 			:disabled="disabled"
 			:placeholder="placeholder"
-			@change="onChange"
+			@input="onInput"
 			:id="uniqueId"
 		/>
 	</div>
 </template>
 
 <script>
-import uniqueId from '@/mixins/uniqueId'
+import uniqueId from '../../mixins/uniqueId'
 
 export default {
 	name: 'FigInput',
@@ -51,7 +51,7 @@ export default {
 	 */
 	props: {
 		icon: { type: String, default: undefined },
-		textIcon: { type: String, default: undefined },
+		iconText: { type: String, default: undefined },
 		value: { type: String, default: undefined },
 		label: { type: String, default: undefined },
 		placeholder: { type: String, default: undefined },
@@ -62,7 +62,7 @@ export default {
 	// Use unique ID so clicking the label also focusses the input
 	mixins: [uniqueId],
 	methods: {
-		onChange(e) {
+		onInput(e) {
 			this.$emit('input', e.target.value)
 		}
 	}
@@ -140,13 +140,12 @@ export default {
 		}
 	}
 
+	// Render the .icon class styles (_icon.scss) but override some additional styles
 	&__icon {
 		position: absolute;
 		top: 0;
 		left: 0;
 		z-index: 1;
-		width: var(--size-medium);
-		height: var(--size-medium);
 		opacity: 0.3;
 		pointer-events: none;
 
@@ -189,15 +188,5 @@ export default {
 	padding-left: 32px;
 }
 
-.spinning {
-	animation: rotating 1s linear infinite;
-}
-@keyframes rotating {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
+// Spinning animation moved to ->  _animations.scss
 </style>

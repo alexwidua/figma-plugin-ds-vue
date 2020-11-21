@@ -1,7 +1,7 @@
 <template>
 	<div
-		v-if="!textIcon"
-		class="icon-button"
+		v-if="!iconText"
+		class="icon icon-button"
 		:class="{
 			['icon--' + icon]: icon,
 			'icon-button--selected': selected,
@@ -13,11 +13,11 @@
 	/>
 	<div
 		v-else
-		class="icon-button"
+		class="icon--text icon-button"
 		:class="{ 'icon-button--selected': selected, spinning, disabled }"
 		@click="onClick"
 		tabIndex="0"
-		v-html="textIcon"
+		v-html="iconText"
 	/>
 </template>
 
@@ -30,7 +30,7 @@ export default {
 	 */
 	props: {
 		icon: { type: String, default: 'heart' },
-		textIcon: String,
+		iconText: String,
 		selected: Boolean,
 		disabled: Boolean,
 		spinning: Boolean
@@ -46,21 +46,12 @@ export default {
 </script>
 
 <style lang="scss">
+// Render the .icon class styles (_icon.scss) but override some additional styles
 .icon-button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: var(--size-medium);
-	height: var(--size-medium);
-	font-size: var(--font-size-xsmall);
-	font-family: var(--font-stack);
 	background-position: -2px -2px;
-
 	border: 2px solid transparent;
 	border-radius: var(--border-radius-small);
 	outline: none;
-	cursor: default;
-	user-select: none;
 
 	&:hover {
 		background-color: var(--hover-fill);
@@ -74,14 +65,15 @@ export default {
 
 	&.disabled {
 		opacity: 0.3;
-	}
 
-	&--text {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: var(--font-size-xsmall);
-		font-family: var(--font-stack);
+		&:hover {
+			background-color: transparent;
+		}
+		&:active,
+		&:focus {
+			border: 2px solid transparent;
+			outline: none;
+		}
 	}
 
 	&--selected {
@@ -102,15 +94,5 @@ export default {
 	}
 }
 
-.spinning {
-	animation: rotating 1s linear infinite;
-}
-@keyframes rotating {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
+// Spinning animation moved to ->  _animations.scss
 </style>
