@@ -9,6 +9,10 @@ export default {
 	name: 'FigDisclosureWrapper'
 	/**
 	 * Disclosure menu wrapper; takes DisclosureItem.vue as childs
+	 *
+	 * TODO: Wrapper should control disclosure items and make sure only
+	 * one DisclosureItem is open at the same time.
+	 *
 	 */
 }
 </script>
