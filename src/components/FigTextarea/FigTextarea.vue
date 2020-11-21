@@ -1,19 +1,19 @@
 <template>
 	<div class="textarea__wrapper">
-		<label v-if="label" class="label" :for="uniqueId" v-html="label" />
 		<textarea
 			class="textarea__field"
 			:id="uniqueId"
 			:value="value"
 			:rows="rows"
-			@change="onChange"
+			@input="onInput"
 			:disabled="disabled"
+			:placeholder="placeholder"
 		/>
 	</div>
 </template>
 
 <script>
-import uniqueId from '@/mixins/uniqueId'
+import uniqueId from '../../mixins/uniqueId'
 
 export default {
 	name: 'FigTextarea',
@@ -21,14 +21,14 @@ export default {
 	 * Textarea input component
 	 */
 	props: {
+		placeholder: String,
 		value: String,
-		label: { type: String, default: undefined },
-		disabled: Boolean,
-		rows: { type: Number, default: 2 }
+		rows: { type: Number, default: 2 },
+		disabled: Boolean
 	},
 	mixins: [uniqueId],
 	methods: {
-		onChange(e) {
+		onInput(e) {
 			this.$emit('input', e.target.value)
 		}
 	}
