@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import uniqueId from '@/mixins/uniqueId'
+import uniqueId from '../../mixins/uniqueId'
 
 export default {
 	name: 'FigSwitch',
