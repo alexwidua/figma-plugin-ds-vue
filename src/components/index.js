@@ -10,6 +10,7 @@ import FigIcon from './FigIcon'
 import FigIconButton from './FigIconButton'
 import FigInput from './FigInput'
 import FigLabel from './FigLabel'
+import FigOnboarding from './FigOnboarding'
 import FigRadio from './FigRadio'
 import FigSelect from './FigSelect'
 import FigSwitch from './FigSwitch'
@@ -28,6 +29,7 @@ export default {
 	FigIconButton,
 	FigInput,
 	FigLabel,
+	FigOnboarding,
 	FigRadio,
 	FigSelect,
 	FigSwitch,
