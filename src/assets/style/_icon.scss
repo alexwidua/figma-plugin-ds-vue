@@ -1,16 +1,16 @@
 .icon {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	display: inline-block;
 	width: var(--size-medium);
 	height: var(--size-medium);
 	font-size: var(--font-size-xsmall);
 	font-family: var(--font-stack);
+	vertical-align: middle;
+	background-position: center;
 	cursor: default;
 	user-select: none;
 
 	&--text {
-		display: flex;
+		display: inline-flex;
 		align-items: center;
 		justify-content: center;
 		font-size: var(--font-size-xsmall);
@@ -29,7 +29,7 @@
 	&--arrow-left-right {
 		background-image: url('../icons/arrow-left-right.svg');
 	}
-	&--up-down {
+	&--arrow-up-down {
 		background-image: url('../icons/arrow-up-down.svg');
 	}
 	&--auto-layout-horizontal {
@@ -50,17 +50,17 @@
 	&--break {
 		background-image: url('../icons/break.svg');
 	}
-	&--caret-down {
-		background-image: url('../icons/caret-down.svg');
-	}
 	&--caret-left {
 		background-image: url('../icons/caret-left.svg');
+	}
+	&--caret-up {
+		background-image: url('../icons/caret-up.svg');
 	}
 	&--caret-right {
 		background-image: url('../icons/caret-right.svg');
 	}
-	&--caret-up {
-		background-image: url('../icons/caret-up.svg');
+	&--caret-down {
+		background-image: url('../icons/caret-down.svg');
 	}
 	&--check {
 		background-image: url('../icons/check.svg');
@@ -128,23 +128,23 @@
 	&--key {
 		background-image: url('../icons/key.svg');
 	}
-	&--layout-align-bottom {
-		background-image: url('../icons/layout-align-bottom.svg');
-	}
 	&--align-horizontal-centers {
 		background-image: url('../icons/layout-align-horizontal-centers.svg');
+	}
+	&--align-vertical-centers {
+		background-image: url('../icons/layout-align-vertical-centers.svg');
 	}
 	&--align-left {
 		background-image: url('../icons/layout-align-left.svg');
 	}
-	&--align-right {
-		background-image: url('../icons/layout-align-right.svg');
-	}
 	&--align-top {
 		background-image: url('../icons/layout-align-top.svg');
 	}
-	&--align-vertical-centers {
-		background-image: url('../icons/layout-align-vertical-centers.svg');
+	&--align-right {
+		background-image: url('../icons/layout-align-right.svg');
+	}
+	&--align-bottom {
+		background-image: url('../icons/layout-align-bottom.svg');
 	}
 	&--layout-grid-columns {
 		background-image: url('../icons/layout-grid-columns.svg');
