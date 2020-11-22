@@ -75,7 +75,7 @@ export default {
 		align-items: center;
 		height: 100%;
 		margin-left: -16px;
-		padding: 0 var(--size-xsmall) 0 calc(var(--size-xlarge) - 2px);
+		padding: 0 var(--size-xsmall) 0 var(--size-large);
 		color: var(--black8);
 		font-weight: var(--font-weight-normal);
 		font-size: var(--font-size-xsmall);

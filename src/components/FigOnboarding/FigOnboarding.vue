@@ -28,7 +28,8 @@ export default {
 	 */
 	props: {
 		icon: { type: String, default: 'smiley' },
-		iconText: { type: String, default: undefined }
+		iconText: { type: String, default: undefined },
+		spinning: Boolean
 	}
 }
 </script>
@@ -45,9 +46,9 @@ export default {
 	}
 
 	&__content {
-		width: 100%;
+		flex: 1 0;
 		margin: 0;
-		padding: calc(var(--size-xxsmall) + 1px) 0 var(--size-xxsmall) 0;
+		padding: var(--size-xxsmall) 0 var(--size-xxsmall) 0;
 		color: var(--black8);
 		font-weight: var(--font-weight-normal);
 		font-size: var(--font-size-xsmall);
