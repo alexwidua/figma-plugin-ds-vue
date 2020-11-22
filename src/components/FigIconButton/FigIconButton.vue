@@ -1,5 +1,5 @@
 <template>
-	<div
+	<span
 		v-if="!iconText"
 		class="icon icon-button"
 		:class="{
@@ -11,9 +11,9 @@
 		@click="onClick"
 		tabIndex="0"
 	/>
-	<div
+	<span
 		v-else
-		class="icon--text icon-button"
+		class="icon icon--text icon-button"
 		:class="{ 'icon-button--selected': selected, spinning, disabled }"
 		@click="onClick"
 		tabIndex="0"
