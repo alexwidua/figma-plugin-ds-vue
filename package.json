@@ -7,7 +7,9 @@
 	"style": "figma-plugin-ds-vue.css",
 	"scripts": {
 		"serve": "vue-cli-service serve src/serve.js --mode development",
-		"build-lib": "vue-cli-service build --target lib --name figma-plugin-ds-vue src/build.js"
+		"build-lib": "vue-cli-service build --target lib --name figma-plugin-ds-vue src/build.js",
+		"docs:dev": "vuepress dev docs",
+		"docs:build": "vuepress build docs"
 	},
 	"dependencies": {},
 	"devDependencies": {
@@ -25,7 +27,8 @@
 		"stylelint-order": "^4.1.0",
 		"stylelint-webpack-plugin": "^2.1.1",
 		"vue": "^2.6.11",
-		"vue-template-compiler": "^2.6.11"
+		"vue-template-compiler": "^2.6.11",
+		"vuepress": "^1.7.1"
 	},
 	"peerDependencies": {
 		"vue": "^2.6.11"
