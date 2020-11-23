@@ -94,16 +94,17 @@ The letter-spacing vars are used to optimize legibility of certain font sizes on
 
 ## Size
 
-| Var              | Value  |
-| :--------------- | :----- |
-| `--size-xxsmall` | `8px`  |
-| `--size-xsmall`  | `16px` |
-| `--size-small`   | `24px` |
-| `--size-medium`  | `32px` |
-| `--size-large`   | `40px` |
-| `--size-xlarge`  | `48px` |
-| `--size-xxlarge` | `64px` |
-| `--size-huge`    | `80px` |
+| Var               | Value  |
+| :---------------- | :----- |
+| `--size-xxxsmall` | `4px`  |
+| `--size-xxsmall`  | `8px`  |
+| `--size-xsmall`   | `16px` |
+| `--size-small`    | `24px` |
+| `--size-medium`   | `32px` |
+| `--size-large`    | `40px` |
+| `--size-xlarge`   | `48px` |
+| `--size-xxlarge`  | `64px` |
+| `--size-xxxlarge` | `80px` |
 
 <ComponentDivider/>
 
