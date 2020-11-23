@@ -9,4 +9,13 @@
 	--size-xlarge: 48px;
 	--size-xxlarge: 64px;
 	--size-xxxlarge: 80px;
+
+	/* Border radius */
+	--border-radius-small: 2px;
+	--border-radius-med: 5px;
+	--border-radius-large: 6px;
+
+	/* Shadows */
+	--shadow-hud: 0 5px 17px rgba(0, 0, 0, 0.2), 0 2px 7px rgba(0, 0, 0, 0.15);
+	--shadow-floating-window: 0 2px 14px rgba(0, 0, 0, 0.15);
 }
