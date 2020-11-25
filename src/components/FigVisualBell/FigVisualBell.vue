@@ -15,7 +15,7 @@
 		<button
 			class="visual-bell__action"
 			v-if="actionLabel"
-			@click="onClick"
+			@click="$emit('click', $event)"
 			v-html="actionLabel"
 		/>
 	</div>
@@ -35,11 +35,6 @@ export default {
 		loading: Boolean,
 		error: Boolean,
 		actionLabel: { type: String, default: undefined }
-	},
-	methods: {
-		onClick() {
-			this.$emit('click')
-		}
 	}
 }
 </script>

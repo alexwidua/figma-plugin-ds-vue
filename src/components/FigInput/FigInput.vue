@@ -23,7 +23,7 @@
 				:value="value"
 				:disabled="disabled"
 				:placeholder="placeholder"
-				@input="onInput"
+				@input="$emit('input', $event.target.value)"
 				:id="uniqueId"
 			/>
 		</div>
@@ -35,7 +35,7 @@
 			:value="value"
 			:disabled="disabled"
 			:placeholder="placeholder"
-			@input="onInput"
+			@input="$emit('input', $event.target.value)"
 			:id="uniqueId"
 		/>
 	</div>
@@ -60,12 +60,7 @@ export default {
 		spinning: Boolean
 	},
 	// Use unique ID so clicking the label also focusses the input
-	mixins: [uniqueId],
-	methods: {
-		onInput(e) {
-			this.$emit('input', e.target.value)
-		}
-	}
+	mixins: [uniqueId]
 }
 </script>
 

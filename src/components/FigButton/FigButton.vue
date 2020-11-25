@@ -8,7 +8,7 @@
 			destructive
 		}"
 		:disabled="disabled"
-		@click="onClick"
+		@click="$emit('click', $event)"
 	>
 		<slot>Button</slot>
 	</button>
@@ -26,11 +26,6 @@ export default {
 		tertiary: Boolean,
 		destructive: Boolean,
 		disabled: Boolean
-	},
-	methods: {
-		onClick() {
-			this.$emit('click')
-		}
 	}
 }
 </script>

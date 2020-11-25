@@ -5,7 +5,7 @@
 			:id="uniqueId"
 			:value="value"
 			:rows="rows"
-			@input="onInput"
+			@input="$emit('input', $event.target.value)"
 			:disabled="disabled"
 			:placeholder="placeholder"
 		/>
@@ -26,12 +26,7 @@ export default {
 		rows: { type: Number, default: 2 },
 		disabled: Boolean
 	},
-	mixins: [uniqueId],
-	methods: {
-		onInput(e) {
-			this.$emit('input', e.target.value)
-		}
-	}
+	mixins: [uniqueId]
 }
 </script>
 

@@ -7,7 +7,7 @@
 			:checked="checked !== undefined ? checked : value"
 			:value="value"
 			:disabled="disabled"
-			@change="onChange"
+			@change="$emit('input', $event.target.checked)"
 		/>
 		<label class="toggle__label" :for="uniqueId">
 			<slot>Item</slot>
@@ -29,12 +29,7 @@ export default {
 		disabled: Boolean
 	},
 	// Use unique ID so clicking the label also toggles the switch
-	mixins: [uniqueId],
-	methods: {
-		onChange(e) {
-			this.$emit('input', e.target.checked)
-		}
-	}
+	mixins: [uniqueId]
 }
 </script>
 
