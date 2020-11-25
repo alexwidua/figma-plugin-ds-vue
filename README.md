@@ -4,7 +4,9 @@
 
 `figma-plugin-ds-vue` is a Vue `v2.x` component library that matches the Figma Design System for building Figma plugins. The library contains a set of handcrafted Vue components such as icons, buttons and other form elements that make it easy to create a plugin frontend that blends seamlessly into the Figma UI ✨🌈
 
-This project is based on [@Thomas Lowrys](https://github.com/thomas-lowry) [figma-plugin-ds-svelte package](https://github.com/thomas-lowry/figma-plugin-ds-svelte) and can be seen as a fork of his svelte library.
+This project is based on [@Thomas Lowry's](https://github.com/thomas-lowry) [figma-plugin-ds-svelte package](https://github.com/thomas-lowry/figma-plugin-ds-svelte) and can be seen as a fork of his svelte library.
+
+[Documentation](https://figma-plugin-ds-vue.netlify.app/)
 
 ## ✨ Installation
 
@@ -40,7 +42,7 @@ Quick reference:
 -   [Title](https://figma-plugin-ds-vue.netlify.app/docs/components.html#title)
 -   [Visual Bell](https://figma-plugin-ds-vue.netlify.app/docs/components.html#visual-bell)
 
-The global stylesheet also includes [style variables](https://figma-plugin-ds-vue.netlify.app/docs/style-variables.html)🎨 and [utility classes](https://figma-plugin-ds-vue.netlify.app/docs/style-utilities.html)🧰 which can be used throughout your plugin 🌈
+The global stylesheet also includes [style variables](https://figma-plugin-ds-vue.netlify.app/docs/style-variables.html) 🎨 and [utility classes](https://figma-plugin-ds-vue.netlify.app/docs/style-utilities.html) 🧰 which can be used throughout your plugin 🌈
 
 ## 🚧 Roadmap
 
