@@ -40,6 +40,7 @@ export default {
 	display: flex;
 	flex-shrink: 0;
 	align-items: center;
+	justify-content: center;
 	height: var(--size-medium);
 	padding: 0 var(--size-xsmall) 0 var(--size-xsmall);
 	color: var(--white);
