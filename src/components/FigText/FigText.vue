@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="type"
+		class="text"
 		:class="[
 			size,
 			weight,
@@ -29,7 +29,7 @@ export default {
 		},
 		size: {
 			type: String,
-			default: 'small'
+			default: 'xsmall'
 		},
 		weight: {
 			type: String,
@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style lang="scss">
-.type {
+.text {
 	font-weight: var(--font-weight-normal);
 	font-size: var(--font-size-xsmall);
 	font-family: var(--font-stack);

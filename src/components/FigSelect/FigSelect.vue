@@ -76,7 +76,7 @@ export default {
 				]
 			}
 		},
-		value: { type: String, default: undefined },
+		value: { type: String | Number, default: undefined },
 		placeholder: { type: String, default: undefined },
 		open: { type: Boolean, default: undefined },
 		disabled: Boolean
