@@ -24,6 +24,7 @@
 				:disabled="disabled"
 				:placeholder="placeholder"
 				@input="$emit('input', $event.target.value)"
+				@change="$emit('change', $event.target.value)"
 				:id="uniqueId"
 			/>
 		</div>
@@ -36,6 +37,7 @@
 			:disabled="disabled"
 			:placeholder="placeholder"
 			@input="$emit('input', $event.target.value)"
+			@change="$emit('change', $event.target.value)"
 			:id="uniqueId"
 		/>
 	</div>
@@ -52,7 +54,7 @@ export default {
 	props: {
 		icon: { type: String, default: undefined },
 		iconText: { type: String, default: undefined },
-		value: { type: String, default: undefined },
+		value: { type: String | Number, default: undefined },
 		label: { type: String, default: undefined },
 		placeholder: { type: String, default: undefined },
 		disabled: Boolean,

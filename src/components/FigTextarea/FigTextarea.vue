@@ -6,6 +6,7 @@
 			:value="value"
 			:rows="rows"
 			@input="$emit('input', $event.target.value)"
+			@change="$emit('change', $event.target.value)"
 			:disabled="disabled"
 			:placeholder="placeholder"
 		/>
@@ -22,7 +23,7 @@ export default {
 	 */
 	props: {
 		placeholder: String,
-		value: String,
+		value: String | Number,
 		rows: { type: Number, default: 2 },
 		disabled: Boolean
 	},
