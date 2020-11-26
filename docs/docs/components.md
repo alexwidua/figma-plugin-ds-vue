@@ -601,8 +601,8 @@ export default {
 | Prop      | Type    | Default/Notes                                                                                             |
 | :-------- | :------ | :-------------------------------------------------------------------------------------------------------- |
 | `color`   | String  | Default: `"black8"`; Pass the name of any [color variable](/docs/style-variables.html#color) to this prop |
-| `size`    | String  | Default: `"xsmall"`; Also accepts `"xsmall"`,`"large"`, `"xlarge"`                                        |
-| `weight`  | String  | Default: `"normal"`; Also accepts `"medium"`,`"bold"`                                                     |
+| `size`    | String  | Default: `"xsmall"`; Accepts `"xsmall"`, `"small"`,`"large"`, `"xlarge"`                                  |
+| `weight`  | String  | Default: `"normal"`; Accepts `"normal"`, `"medium"`,`"bold"`                                              |
 | `inverse` | Boolean | Default: `false`; Optimizes letter-spacing for light on dark applications                                 |
 
 <ComponentDivider/>
