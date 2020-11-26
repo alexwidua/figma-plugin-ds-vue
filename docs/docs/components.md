@@ -368,16 +368,18 @@ export default {
 <FigInput icon="heart" placeholder="Placeholder" border />
 ```
 
-| Prop          | Type    | Default/Notes                                                        |
-| :------------ | :------ | :------------------------------------------------------------------- |
-| `v-on:input`  | Func    | Handle event emitted from the component. Ex: `v-on:input={funcName}` |
-| `label`       | String  | Input box label                                                      |
-| `placeholder` | String  |                                                                      |
-| `border`      | Boolean | Default: `false`; Force a border around the input field              |
-| `disabled`    | Boolean | Default: `false`                                                     |
-| `icon`        | String  | _See Icon component for usage_                                       |
-| `iconText`    | String  | _See Icon component for usage_                                       |
-| `spinning`    | Boolean | _See Icon component for usage_                                       |
+| Prop          | Type          | Default/Notes                                                         |
+| :------------ | :------------ | :-------------------------------------------------------------------- |
+| `v-on:input`  | Func          | Handle event emitted from the component. Ex: `v-on:input={funcName}`  |
+| `v-on:change` | Func          | Handle event emitted from the component. Ex: `v-on:change={funcName}` |
+| `value`       | String/Number |                                                                       |
+| `label`       | String        | Input box label                                                       |
+| `placeholder` | String        |                                                                       |
+| `border`      | Boolean       | Default: `false`; Force a border around the input field               |
+| `disabled`    | Boolean       | Default: `false`                                                      |
+| `icon`        | String        | _See Icon component for usage_                                        |
+| `iconText`    | String        | _See Icon component for usage_                                        |
+| `spinning`    | Boolean       | _See Icon component for usage_                                        |
 
 <ComponentDivider/>
 
@@ -599,7 +601,7 @@ export default {
 | Prop      | Type    | Default/Notes                                                                                             |
 | :-------- | :------ | :-------------------------------------------------------------------------------------------------------- |
 | `color`   | String  | Default: `"black8"`; Pass the name of any [color variable](/docs/style-variables.html#color) to this prop |
-| `size`    | String  | Default: `"small"`; Also accepts `"xsmall"`,`"large"`, `"xlarge"`                                         |
+| `size`    | String  | Default: `"xsmall"`; Also accepts `"xsmall"`,`"large"`, `"xlarge"`                                        |
 | `weight`  | String  | Default: `"normal"`; Also accepts `"medium"`,`"bold"`                                                     |
 | `inverse` | Boolean | Default: `false`; Optimizes letter-spacing for light on dark applications                                 |
 
@@ -628,13 +630,14 @@ export default {
 <FigTextarea placeholder="Placeholder" v-model="textModel" />
 ```
 
-| Prop          | Type    | Default/Notes                                                        |
-| :------------ | :------ | :------------------------------------------------------------------- |
-| `v-on:input`  | Func    | Handle event emitted from the component. Ex: `v-on:input={funcName}` |
-| `value`       | String  | Value of textarea                                                    |
-| `placeholder` | String  | Override default placeholder text with a string                      |
-| `rows`        | Int     | Default: `2`; Number of rows to display (textarea height)            |
-| `disabled`    | Boolean | Default: `false`                                                     |
+| Prop          | Type          | Default/Notes                                                         |
+| :------------ | :------------ | :-------------------------------------------------------------------- |
+| `v-on:input`  | Func          | Handle event emitted from the component. Ex: `v-on:input={funcName}`  |
+| `v-on:change` | Func          | Handle event emitted from the component. Ex: `v-on:change={funcName}` |
+| `value`       | String/Number | Value of textarea                                                     |
+| `placeholder` | String        | Override default placeholder text with a string                       |
+| `rows`        | Int           | Default: `2`; Number of rows to display (textarea height)             |
+| `disabled`    | Boolean       | Default: `false`                                                      |
 
 <ComponentDivider/>
 
