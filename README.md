@@ -2,9 +2,7 @@
 <img src="misc/hero.svg" height="165px"/>
 </p>
 
-`figma-plugin-ds-vue` is a Vue `v2.x` component library that matches the Figma Design System for building Figma plugins. The library contains a set of handcrafted Vue components such as icons, buttons and other form elements that make it easy to create a plugin frontend that blends seamlessly into the Figma UI ✨🌈
-
-This project is based on [@Thomas Lowry's](https://github.com/thomas-lowry) [figma-plugin-ds-svelte package](https://github.com/thomas-lowry/figma-plugin-ds-svelte) and can be seen as a fork of his svelte library.
+`figma-plugin-ds-vue` is a Vue `v2.x` component library that matches the Figma Design System for building Figma plugins. This library contains a set of Vue components such as icons, buttons and other form elements that blend seamlessly into the Figma UI.
 
 [Documentation](https://figma-plugin-ds-vue.netlify.app/)
 
@@ -55,6 +53,8 @@ This project is a work-in-progress, here's a small roadmap:
 ⬜ Update the library to Vue `v3.x` (since `v-model` changed with Vue 3 this would introduce breaking changes)
 
 ## 🌀 Misc
+
+A great writeup on Figma plugin design & heuristics is [@yuanqing's](https://github.com/yuanqing) [The UX of Figma plugins](https://uxdesign.cc/the-ux-of-figma-plugins-f4f896f8cf35) 📚
 
 This project is based on [@Thomas Lowry's](https://github.com/thomas-lowry) [figma-plugin-ds-svelte package](https://github.com/thomas-lowry/figma-plugin-ds-svelte) and can be seen as a fork of his svelte library. It also includes refactored components of [@Morglod's](https://github.com/Morglod) [figma-vue-boilerplate](https://github.com/Morglod/figma-vue-boilerplate), a project which basically kickstarted the development of this one. S/o to these amazing humans 👋
 
