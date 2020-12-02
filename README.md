@@ -54,9 +54,9 @@ This project is a work-in-progress, here's a small roadmap:
 
 ## 🌀 Misc
 
-A great writeup on Figma plugin design & heuristics is [@yuanqing's](https://github.com/yuanqing) [The UX of Figma plugins](https://uxdesign.cc/the-ux-of-figma-plugins-f4f896f8cf35) 📚
+A great writeup on Figma plugin design & heuristics is [@yuanqing's](https://github.com/yuanqing) **[The UX of Figma plugins](https://uxdesign.cc/the-ux-of-figma-plugins-f4f896f8cf35)** 📚
 
-This project is based on [@Thomas Lowry's](https://github.com/thomas-lowry) [figma-plugin-ds-svelte package](https://github.com/thomas-lowry/figma-plugin-ds-svelte) and can be seen as a fork of his svelte library. It also includes refactored components of [@Morglod's](https://github.com/Morglod) [figma-vue-boilerplate](https://github.com/Morglod/figma-vue-boilerplate), a project which basically kickstarted the development of this one. S/o to these amazing humans 👋
+This project is based on [@Thomas Lowry's](https://github.com/thomas-lowry) **[figma-plugin-ds-svelte](https://github.com/thomas-lowry/figma-plugin-ds-svelte)** and can be seen as a fork of his svelte library. It also includes refactored components of [@Morglod's](https://github.com/Morglod) **[figma-vue-boilerplate](https://github.com/Morglod/figma-vue-boilerplate)**, a project which basically kickstarted the development of this one. S/o to these amazing humans 👋
 
 ## 📝 License
 
