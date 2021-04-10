@@ -31,14 +31,14 @@ Quick reference:
 -   [Icon Button](https://figma-plugin-ds-vue.netlify.app/docs/components.html#icon-button)
 -   [Input](https://figma-plugin-ds-vue.netlify.app/docs/components.html#input)
 -   [Label](https://figma-plugin-ds-vue.netlify.app/docs/components.html#label)
--   [Onboarding](https://figma-plugin-ds-vue.netlify.app/docs/components.html#onboarding)
 -   [Radio](https://figma-plugin-ds-vue.netlify.app/docs/components.html#radio)
 -   [Select](https://figma-plugin-ds-vue.netlify.app/docs/components.html#select)
--   [Switch](https://figma-plugin-ds-vue.netlify.app/docs/components.html#switch)
+-   [Toggle](https://figma-plugin-ds-vue.netlify.app/docs/components.html#Toggle)
 -   [Text](https://figma-plugin-ds-vue.netlify.app/docs/components.html#text)
 -   [Textarea](https://figma-plugin-ds-vue.netlify.app/docs/components.html#textarea)
 -   [Title](https://figma-plugin-ds-vue.netlify.app/docs/components.html#title)
--   [Visual Bell](https://figma-plugin-ds-vue.netlify.app/docs/components.html#visual-bell)
+
+TODO: NumInput, Tooltip
 
 The global stylesheet also includes [style variables](https://figma-plugin-ds-vue.netlify.app/docs/style-variables.html) 🎨 and [utility classes](https://figma-plugin-ds-vue.netlify.app/docs/style-utilities.html) 🧰 which can be used throughout your plugin 🌈
 
@@ -46,7 +46,6 @@ The global stylesheet also includes [style variables](https://figma-plugin-ds-vu
 
 This project is a work-in-progress, here's a small roadmap:
 
-⬜ `FigDisclosure` component should control its `FigDisclosureItem` child and prevent it from opening multiple disclosure menus at the same time  
 ⬜ Update documentation and create a meaningful order for the component overview (sorted alphabetically atm)  
 ⬜ Add detailed description of each component (context/usage?)  
 ...  
