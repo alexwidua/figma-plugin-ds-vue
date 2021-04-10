@@ -1,41 +1,43 @@
 /* Components */
 
-import FigButton from './components/FigButton'
-import FigCheckbox from './components/FigCheckbox'
-import FigDisclosure from './components/FigDisclosure'
-import FigDisclosureItem from './components/FigDisclosureItem'
-import FigDivider from './components/FigDivider'
-import FigIcon from './components/FigIcon'
-import FigIconButton from './components/FigIconButton'
-import FigInput from './components/FigInput'
-import FigLabel from './components/FigLabel'
-import FigRadio from './components/FigRadio'
-import FigSelect from './components/FigSelect'
-import FigSwitch from './components/FigSwitch'
-import FigTextarea from './components/FigTextarea'
-import FigText from './components/FigText'
-import FigTitle from './components/FigTitle'
-import FigVisualBell from './components/FigVisualBell'
+import Button from './components/Button'
+import Checkbox from './components/Checkbox'
+import Disclosure from './components/Disclosure'
+import DisclosureItem from './components/DisclosureItem'
+import Divider from './components/Divider'
+import Icon from './components/Icon'
+import IconButton from './components/IconButton'
+import Input from './components/Input'
+import Label from './components/Label'
+import NumInput from './components/NumInput'
+import Radio from './components/Radio'
+import Select from './components/Select'
+import Toggle from './components/Toggle'
+import Textarea from './components/Textarea'
+import Txt from './components/Txt'
+import Title from './components/Title'
+import Tooltip from './components/Tooltip'
 
-export {
-	FigButton,
-	FigCheckbox,
-	FigDisclosure,
-	FigDisclosureItem,
-	FigDivider,
-	FigIcon,
-	FigIconButton,
-	FigInput,
-	FigLabel,
-	FigRadio,
-	FigSelect,
-	FigSwitch,
-	FigTextarea,
-	FigText,
-	FigTitle,
-	FigVisualBell
+export default {
+	Button,
+	Checkbox,
+	Disclosure,
+	DisclosureItem,
+	Divider,
+	Icon,
+	IconButton,
+	Input,
+	Label,
+	NumInput,
+	Radio,
+	Select,
+	Toggle,
+	Textarea,
+	Txt,
+	Title,
+	Tooltip
 }
 
 /* Style */
 
-import './assets/style/index.scss'
+import './components/assets/style/index.scss'
