@@ -1,6 +1,6 @@
 module.exports = {
 	chainWebpack: (config) => {
-		// Inline svg icons since Figma doesn't support assets
+		// Inline svg icons because Figma doesn't support external assets
 		config.module.rule('svg').uses.clear()
 		config.module
 			.rule('svg')
