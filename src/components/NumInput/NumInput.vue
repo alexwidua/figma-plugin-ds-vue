@@ -61,14 +61,13 @@ export default {
 	props: {
 		icon: { type: String, default: undefined },
 		iconText: { type: String, default: undefined },
-		value: { type: String | Number, default: 0 },
+		value: { type: [Number, String], default: 0 },
 		disabled: Boolean,
 		border: Boolean,
 		spinning: Boolean,
-		min: { type: Number | String, default: undefined },
-		max: { type: Number | String, default: undefined },
-		speed: { type: Number, default: 0.3 },
-		steps: { type: Number, default: 1 },
+		min: { type: [Number, String], default: undefined },
+		max: { type: [Number, String], default: undefined },
+		steps: { type: [Number, String], default: 1 },
 		unit: { type: String, default: undefined }
 	},
 	methods: {
