@@ -35,6 +35,7 @@
 	"files": [
 		"dist/*"
 	],
+	"types": "./types/index.d.ts",
 	"keywords": [
 		"vue",
 		"figma",
