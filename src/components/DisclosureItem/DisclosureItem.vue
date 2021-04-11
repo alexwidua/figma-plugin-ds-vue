@@ -2,7 +2,7 @@
 	<li
 		class="fig-disclosure-item"
 		:class="{
-			'fig-disclosure-item--expanded': expansionState,
+			'fig-disclosure-item--expanded': expanded,
 			'fig-disclosure-item--bold': bold
 		}"
 	>
@@ -50,7 +50,7 @@ export default {
 		}
 	},
 	computed: {
-		expansionState() {
+		expanded() {
 			if (!this.concede) {
 				return this.index == this.disclosure.currentIndex
 			} else {
