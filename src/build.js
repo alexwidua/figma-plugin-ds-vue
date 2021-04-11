@@ -18,7 +18,7 @@ import Txt from './components/Txt'
 import Title from './components/Title'
 import Tooltip from './components/Tooltip'
 
-export default {
+export {
 	Button,
 	Checkbox,
 	Disclosure,
@@ -40,4 +40,4 @@ export default {
 
 /* Style */
 
-import './components/assets/style/index.scss'
+import './assets/style/index.scss'
