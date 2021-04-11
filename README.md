@@ -4,8 +4,6 @@
 
 `figma-plugin-ds-vue` is a Vue `v2.x` component library that matches the [UI2: Figma Design System](https://www.figma.com/community/file/768283795272784978) for building Figma plugins. It is based on [thomas-lowry/figma-plugin-ds](https://github.com/thomas-lowry/figma-plugin-ds).
 
-[Documentation](https://figma-plugin-ds-vue.netlify.app/)
-
 ## ✨ Installation
 
 1.  Install the package `npm i figma-plugin-ds-vue`
@@ -14,11 +12,13 @@
 
     `import 'figma-plugin-ds-vue/dist/figma-plugin-ds-vue.css'`
 
-3.  Import and register the Vue components you want to use, refer to the [documentation](https://figma-plugin-ds-vue.netlify.app/) for details and an overview of all avaiable components
+3.  Import and register the Vue components you want to use, refer to the [documentation](https://figma-plugin-ds-vue.netlify.app/) for details and an overview of all available components
 
 4.  Enjoy building your plugin 💻✨
 
 ## 📝 Documentation
+
+⚠️ The documentation is currently outdated. The component names changed, the 'Fig' prefix was removed (ex: `<FigSelect/>` → `<Select/>`)
 
 Refer to the library's [documentation](https://figma-plugin-ds-vue.netlify.app/docs/components.html) for a detailed overview of each component and its usage.
 
@@ -46,8 +46,7 @@ The global stylesheet also includes [style variables](https://figma-plugin-ds-vu
 
 This project is a work-in-progress, here's a small roadmap:
 
-⬜ Update documentation and create a meaningful order for the component overview (sorted alphabetically atm)  
-⬜ Add detailed description of each component (context/usage?)  
+⬜ ⚠️ Update documentation to reflect changes introduced in 1.2.3  
 ...  
 ⬜ Update the library to Vue `v3.x` (since `v-model` changed with Vue 3 this would introduce breaking changes)
 
