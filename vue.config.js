@@ -8,8 +8,5 @@ module.exports = {
 			.use('url-loader')
 			.loader('url-loader')
 	},
-	css: {
-		extract: false
-	},
 	productionSourceMap: false
 }
