@@ -9,7 +9,7 @@ module.exports = {
 			.loader('url-loader')
 	},
 	css: {
-		extract: process.env.NODE_ENV !== 'production' ? false : true
+		extract: false
 	},
 	productionSourceMap: false
 }
