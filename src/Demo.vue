@@ -100,16 +100,18 @@
 			<!------->
 			<section :style="`width:${numInputModel}px`">
 				<div class="__title">Num Input</div>
-				<NumInput
-					v-model="numInputModel"
-					min="100"
-					max="650"
-					steps="0.2"
-					border
-				/>
+				<NumInput v-model="numInputModel" min="100" steps="2" border />
+				<NumInput v-model="numInputModel" max="1000" steps="2" border />
 
 				<NumInput
 					icon="spacing"
+					v-model="numInputModel"
+					min="100"
+					border
+					unit="px"
+				/>
+				<NumInput
+					iconText="S"
 					v-model="numInputModel"
 					min="100"
 					max="650"
@@ -195,8 +197,13 @@
 			<!------->
 			<section>
 				<div class="__title">Tooltip</div>
-				<Tooltip position="l">This is a tooltip.</Tooltip>
-				<Tooltip position="tl">This is a tooltip.</Tooltip>
+				<Tooltip position="l" width="200"
+					>This is a tooltip. This is a tooltip. This is a tooltip.
+					This is a tooltip.</Tooltip
+				>
+				<Tooltip position="tl"
+					>This is a tooltip. This is a tooltip.</Tooltip
+				>
 				<Tooltip position="tc">This is a tooltip.</Tooltip>
 				<Tooltip position="tr">This is a tooltip.</Tooltip>
 				<Tooltip position="r">This is a tooltip.</Tooltip>

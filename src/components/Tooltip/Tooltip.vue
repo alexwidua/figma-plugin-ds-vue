@@ -1,6 +1,15 @@
 <template>
-	<span class="fig-tooltip fig-icon fig-icon--tooltip" :class="getPosition">
-		<span class="fig-tooltip__content">
+	<span
+		class="fig-tooltip fig-icon"
+		:class="[
+			getPosition,
+			inverse ? ' fig-icon--tooltip-inverse' : ' fig-icon--tooltip'
+		]"
+	>
+		<span
+			class="fig-tooltip__content"
+			:style="width ? `width: ${this.width}px` : 'width: auto'"
+		>
 			<slot />
 		</span>
 	</span>
@@ -17,6 +26,14 @@ export default {
 		position: {
 			type: String,
 			default: 'bottom-center'
+		},
+		width: {
+			type: [String, Number],
+			default: undefined
+		},
+		inverse: {
+			type: Boolean,
+			default: false
 		}
 	},
 	computed: {
@@ -57,12 +74,12 @@ export default {
 		padding: 8px;
 		color: #fff;
 		font-size: var(--font-size-xsmall);
-		white-space: nowrap;
 		text-align: center;
 		background: var(--bg-hud);
 		border-radius: 2px;
 		visibility: hidden;
 		opacity: 0;
+		width: 96px;
 		pointer-events: none;
 
 		&::after {
@@ -71,6 +88,10 @@ export default {
 			border-style: solid;
 			border-width: 7px;
 			content: '';
+		}
+
+		&--nowrap {
+			white-space: nowrap;
 		}
 	}
 

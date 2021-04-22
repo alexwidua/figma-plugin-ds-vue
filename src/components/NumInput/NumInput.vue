@@ -121,7 +121,6 @@ export default {
 		},
 		handleKeyArrowUp(e) {
 			let val = parseFloat(e.target.value) + this.steps
-			console.log(val)
 			this.$emit('input', this.clamp(val, this.min, this.max))
 			e.preventDefault()
 		},
@@ -129,7 +128,6 @@ export default {
 			let val = parseFloat(e.target.value) - this.steps
 			this.$emit('input', this.clamp(val, this.min, this.max))
 			e.preventDefault()
-			//`${value}${unit ? unit : ''}`
 		},
 		handleChange(e) {
 			let validate = !isNaN(parseFloat(e.target.value))
@@ -144,11 +142,18 @@ export default {
 		},
 		// Helpers
 		clamp(value, min, max) {
+			// if (min != undefined && max != undefined) {
+			// 	return this.round(Math.min(Math.max(value, min), max), 2)
+			// } else return value
 			if (min != undefined && max != undefined) {
 				return this.round(Math.min(Math.max(value, min), max), 2)
+			} else if (min != undefined && max == undefined) {
+				return this.round(Math.max(value, min), 2)
+			} else if (min == undefined && max != undefined) {
+				return this.round(Math.min(value, max), 2)
 			} else return value
 		},
-		round: function(value, decimals) {
+		round(value, decimals) {
 			return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals)
 		}
 	},
@@ -268,6 +273,10 @@ export default {
 			font-weight: var(--font-weight-bold);
 			font-size: var(--font-size-xsmall);
 			opacity: 1;
+			user-select: none;
+			&:hover {
+				cursor: ew-resize !important;
+			}
 		}
 
 		&:hover {
