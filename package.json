@@ -1,6 +1,6 @@
 {
 	"name": "figma-plugin-ds-vue",
-	"version": "1.2.3",
+	"version": "2.0.0",
 	"description": "Vue component library that matches the Figma Design System for building Figma plugins.",
 	"private": false,
 	"main": "./dist/figma-plugin-ds-vue.umd.js",
