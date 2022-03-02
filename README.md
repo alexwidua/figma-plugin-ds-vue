@@ -2,7 +2,7 @@
 <img src="misc/hero.svg" height="165px"/>
 </p>
 
-`figma-plugin-ds-vue` is a Vue component library that matches the [UI2: Figma Design System](https://www.figma.com/community/file/768283795272784978) for building Figma plugins. It is based on [thomas-lowry/figma-plugin-ds](https://github.com/thomas-lowry/figma-plugin-ds).
+`figma-plugin-ds-vue` is a Vue component library that matches the [UI2: Figma Design System](https://www.figma.com/community/file/928108847914589057) for building Figma plugins. It is based on [thomas-lowry/figma-plugin-ds](https://github.com/thomas-lowry/figma-plugin-ds).
 
 ### [View Documentation](https://figma-plugin-ds-vue.netlify.app/)
 
